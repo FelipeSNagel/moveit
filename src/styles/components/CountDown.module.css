@@ -57,8 +57,34 @@
     font-weight: 600;
 
     transition:  background-color 0.2s;
+
+    
 }
 
 .startCountDownButton:hover {
     background-color: var(--blue-dark);
+}
+
+.startCountDownButtonActive {
+    background: var(--white);
+    color: var(--title);
+}
+
+.startCountDownButtonActive:not(:disabled):hover {
+    background: var(--red);
+    color: var(--white);
+}
+
+.startCountDownButtonActive:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
+
+    border-bottom: 4px solid var(--green);
+}
+
+.startCountDownButton svg {
+    font-size: 25px;
+    margin-left: 10px;
+    color: var(--green);
 }
